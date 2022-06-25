@@ -1,11 +1,5 @@
 import requests
-import json
 from bs4 import BeautifulSoup
-
-# response = requests.get(url='https://evroopt.by/wp-content/themes/evroopt/klaster-shop-load.php')
-# with open('stores.json', 'w', encoding='utf8') as f:
-#     stores = response.json().get('info')
-#     json.dump(stores, f, ensure_ascii=False, indent=4)
 
 URL_RED_PRICE = 'https://evroopt.by/redprice/vse-tovary/'
 URL_BLACKFRIDAY_PRICE = 'https://evroopt.by/deals/blackfriday/'
