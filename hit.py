@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-URL = 'https://groshyk.by/flyer/'
+URL = 'https://hitdiscount.by/flyer/'
 
 
 def get_data(url=URL):
@@ -10,6 +10,3 @@ def get_data(url=URL):
     figure_tags = soup.find_all('figure', attrs={'class': 'redactor-keep-figure'})
     img_tags = [i.contents for i in figure_tags]
     return img_tags
-
-
-get_data()
