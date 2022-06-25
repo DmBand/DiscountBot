@@ -50,7 +50,7 @@ async def euroopt(message: types.Message):
 @dp.message_handler(Text(equals=['Черная пятница', 'черная пятница', 'Чёрная пятница', 'чёрная пятница']))
 async def euroopt(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-    keyboard.add('Меню')
+    keyboard.add('Евроопт', 'Меню')
     data = get_blackfriday_price()
     for i in data:
         text = i['src']
