@@ -16,7 +16,11 @@ dp = Dispatcher(bot)
 @dp.message_handler(commands=['start', 'старт', 'Старт'], )
 async def start(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-    buttons = ['Евроопт', 'Грошик', 'Хит']
+    buttons = [
+        'Евроопт',
+        'Грошик',
+        'Хит',
+    ]
     keyboard.add(*buttons)
     await message.answer(text='Выберите сеть магазинов', reply_markup=keyboard)
 
@@ -24,7 +28,11 @@ async def start(message: types.Message):
 @dp.message_handler(Text(equals=['Меню', 'меню']))
 async def euroopt(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-    buttons = ['Евроопт', 'Грошик', 'Хит']
+    buttons = [
+        'Евроопт',
+        'Грошик',
+        'Хит',
+    ]
     keyboard.add(*buttons)
     await message.answer(text='Выберите сеть магазинов', reply_markup=keyboard)
 
